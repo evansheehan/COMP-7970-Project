@@ -7,6 +7,7 @@ import java.util.Scanner;
 /**
  * Created by awubis on 11/6/17.
  */
+
 public class DBScan {
 
    private ArrayList<Point> dataset;
