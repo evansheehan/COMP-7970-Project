@@ -12,5 +12,6 @@ public class DBScanTest {
    @Test
    public void test1() throws FileNotFoundException {
       DBScan scan = new DBScan("com-dblp.ungraph.txt");
+      scan.dbScan(3, 3);
    }
 }

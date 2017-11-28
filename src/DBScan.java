@@ -2,6 +2,7 @@ import java.io.*;
 import java.lang.reflect.Array;
 import java.nio.Buffer;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -45,5 +46,21 @@ public class DBScan {
          }
       }
       return manyLists;
+   }
+
+   public ArrayList<ArrayList<String>> dbScan(int radius, int minPts) {
+      ArrayList<ArrayList<String>> dataset = new ArrayList<>(this.dataset);
+      ArrayList<ArrayList<String>> unvisitedPoints = new ArrayList<>(dataset);
+      ArrayList<String> list;
+      Random randGen = new Random();
+
+      do {
+         int randNum = randGen.nextInt(dataset.size());
+         list = dataset.get(randNum);
+
+      }
+      while (unvisitedPoints.size() > 0);
+
+      return null;
    }
 }
