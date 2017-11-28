@@ -26,17 +26,21 @@ public class DBScan {
          String line = in.nextLine();
          Scanner inLine = new Scanner(line);
 
-         while (!line.startsWith("#")) {
+         if (!line.startsWith("#")) {
             String point = inLine.next();
             if (singleList.size() == 0) {
                singleList.add(point);
                singleList.add(inLine.next());
+               prevNode = singleList.get(0);
             } else if (prevNode.compareTo(point) == 0) {
-               singleList.add(in.next());
+               singleList.add(inLine.next());
                prevNode = singleList.get(0);
             } else if (prevNode.compareTo(point) != 0) {
                manyLists.add(singleList);
                singleList = new ArrayList<>();
+               singleList.add(point);
+               singleList.add(inLine.next());
+               prevNode = singleList.get(0);
             }
          }
       }
