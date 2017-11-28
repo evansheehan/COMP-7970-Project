@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class DBScanTest {
 
    @Test
-   public void test1() throws FileNotFoundException{
+   public void test1() throws FileNotFoundException {
       DBScan scan = new DBScan("com-dblp.ungraph.txt");
    }
 }
