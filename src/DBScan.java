@@ -10,63 +10,36 @@ import java.util.Scanner;
 
 public class DBScan {
 
-   private ArrayList<Point> dataset;
+   private ArrayList<ArrayList<String>> dataset;
 
    public DBScan(String fileName) throws FileNotFoundException {
-      dataset = new ArrayList<>();
       dataset = readInput(fileName);
    }
 
-   class Point {
-      String nodeID;
-      ArrayList<Point> neighbors;
-
-      public Point() {
-         throw new IllegalArgumentException();
-      }
-
-      public Point(String nodeID) {
-         this.nodeID = nodeID;
-      }
-
-      public Point(String nodeID, String neighbor) {
-         this.nodeID = nodeID;
-         if (neighbors == null) {
-            neighbors = new ArrayList<>();
-         }
-         neighbors.add(new Point(neighbor));
-      }
-
-      private void addNeighbor(String nodeID) {
-         Point point = new Point(nodeID);
-         neighbors.add(point);
-      }
-   }
-
-   public ArrayList<Point> readInput(String fileName) throws FileNotFoundException {
+   public ArrayList<ArrayList<String>> readInput(String fileName) throws FileNotFoundException {
       Scanner in = new Scanner(new FileInputStream(new File(fileName)));
-      String prevPoint = "";
+      ArrayList<ArrayList<String>> manyLists = new ArrayList<>();
+      ArrayList<String> singleList = new ArrayList<>();
+      String prevNode = "";
 
       while (in.hasNext()) {
          String line = in.nextLine();
-         if (!line.startsWith("#")) {
-            Point point = new Point(in.next(), in.next());
-            if (dataset.size() == 0) {
-               dataset.add(point);
-            } else if (prevPoint.compareTo(point.nodeID) == 0) {
-               point.addNeighbor(point.nodeID);
-               in.next();
+         while (!line.startsWith("#")) {
+            String point = in.next();
+            if (prevNode.compareTo(point) == 0) {
+               if (singleList.size() == 0) {
+                  singleList.add(point);
+                  singleList.add(in.next());
+               } else {
+                  singleList.add(in.next());
+               }
+               prevNode = singleList.get(0);
+            } else if (prevNode.compareTo(point) != 0) {
+               manyLists.add(singleList);
+               singleList = new ArrayList<>();
             }
-            prevPoint = point.nodeID;
          }
       }
-      return dataset;
+      return manyLists;
    }
-
-   public ArrayList<ArrayList<Point>> dbScanAlgorithm(ArrayList<Point> allPoints, int radius, int minPts) {
-      return null;
-   }
-   /*public double calculateDistance(Point point1, Point point2) {
-      return 0;
-   }*/
 }

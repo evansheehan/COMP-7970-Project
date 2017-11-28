@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0a5f1f1-3262-400a-80da-40e0953f460a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/DBScan$Point.class" afterPath="$PROJECT_DIR$/out/production/Project/DBScan$Point.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/DBScan.class" afterPath="$PROJECT_DIR$/out/production/Project/DBScan.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Project/DBScan$Point.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBScan.java" afterPath="$PROJECT_DIR$/src/DBScan.java" />
     </list>
@@ -24,16 +23,10 @@
       <file leaf-file-name="DBScan.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBScan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#1734#1735#0" expanded="true" />
-                <element signature="e#1758#1759#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -599,7 +592,7 @@
       <workItem from="1510713546847" duration="1047000" />
       <workItem from="1510770228294" duration="1342000" />
       <workItem from="1511722931815" duration="108000" />
-      <workItem from="1511818859117" duration="6239000" />
+      <workItem from="1511818859117" duration="8308000" />
     </task>
     <task id="LOCAL-00001" summary="11/14/2017">
       <created>1510682663496</created>
@@ -622,28 +615,17 @@
       <option name="project" value="LOCAL" />
       <updated>1510691784001</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="11/28/2017">
+      <created>1511893380733</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1511893380733</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 08m 21s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 09m 07s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 10m 39s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 12m 16s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 12m 35s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 12m 40s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 13m 25s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
@@ -656,9 +638,27 @@
     <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 22m 12s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 52m 04s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 52m 52s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 53m 50s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 54m 16s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 54m 49s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.28 at 12h 55m 38s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19016000" />
+    <option name="totallyTimeSpent" value="21085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="657" extended-state="6" />
@@ -680,13 +680,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20863836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39455783" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19727892" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -714,11 +714,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="11/14/2017" />
-    <option name="LAST_COMMIT_MESSAGE" value="11/14/2017" />
+    <MESSAGE value="11/28/2017" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/28/2017" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -733,12 +734,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -767,12 +762,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,12 +790,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -835,12 +818,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,12 +846,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -922,16 +893,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DBScan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="264">
+          <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
           </folding>
         </state>
       </provider>
