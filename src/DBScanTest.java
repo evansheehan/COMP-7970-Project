@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -12,6 +13,7 @@ public class DBScanTest {
    @Test
    public void test1() throws FileNotFoundException {
       DBScan scan = new DBScan("com-dblp.ungraph.txt");
+      ArrayList<String> list = scan.getList("386");
       scan.dbScan(3, 3);
    }
    @Test

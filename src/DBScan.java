@@ -73,14 +73,19 @@ public class DBScan {
       return null;
    }
 
-   public int getNeighborhood(ArrayList<String> list, int radius) {
+   public int numNeighbors(ArrayList<String> list, int radius) {
       ArrayList<String> bank = new ArrayList<>();
       int level = 1;
       int numPoints = 0;
 
       numPoints += list.size() - 1;
       level++;
+
+
       while (level <= radius) {
+         String header = bank.get(0);
+         //use getList method
+         bank.remove(0);
          for (int i = 1; i < list.size(); i++) {
             String point = list.get(i);
             if (!bank.contains(point)) {
@@ -92,5 +97,17 @@ public class DBScan {
          //go through bank and count
 
       return 0;
+   }
+
+   public ArrayList<String> getList (String header) {
+
+      for (int i = 0; i < dataset.size(); i++) {
+         if (dataset.get(i).get(0).compareTo(header) == 0) {
+            return dataset.get(i);
+         }
+      }
+      //Preferably use some kind of search like binary, but I'll implement linear for now.
+
+      return null;
    }
 }
