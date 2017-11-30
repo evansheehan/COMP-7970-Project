@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class DBScan {
 
    private ArrayList<ArrayList<String>> dataset;
+   private ArrayList<String> datasetIDs;
 
    public DBScan(String fileName) throws FileNotFoundException {
       dataset = readInput(fileName);
@@ -29,38 +30,33 @@ public class DBScan {
          if (!line.startsWith("#")) {
             String fromNode = inLine.next();
             String toNode = inLine.next();
-            if (getList(fromNode) == null) {
-               if (singleList.size() == 0) {
-                  singleList.add(fromNode);
-                  singleList.add(toNode);
-                  prevNode = singleList.get(0);
-               } else if (prevNode.compareTo(fromNode) == 0) {
-                  singleList.add(toNode);
-                  prevNode = singleList.get(0);
-               } else if (prevNode.compareTo(fromNode) != 0) {
-                  manyLists.add(singleList);
-                  singleList = new ArrayList<>();
-                  singleList.add(fromNode);
-                  singleList.add(toNode);
-                  prevNode = singleList.get(0);
-               }
+            if (singleList.size() == 0) {
+               singleList.add(fromNode);
+               singleList.add(toNode);
+               prevNode = singleList.get(0);
+            } else if (prevNode.compareTo(fromNode) == 0) {
+               singleList.add(toNode);
+               prevNode = singleList.get(0);
+            } else if (prevNode.compareTo(fromNode) != 0) {
+               manyLists.add(singleList);
+               singleList = new ArrayList<>();
+               singleList.add(fromNode);
+               singleList.add(toNode);
+               prevNode = singleList.get(0);
             }
-            else {
-               getList(fromNode).add(toNode);
-            }
+         }
 
 
-            if (getList(toNode) == null) {
+            /*if (getList(manyLists, toNode) == null) {
                ArrayList<String> temp = new ArrayList<>();
                temp.add(toNode);
                temp.add(fromNode);
                manyLists.add(temp);
             } else {
-               getList(toNode).add(fromNode);
-            }
+               getList(manyLists, toNode).add(fromNode);
+            }*/
 
 
-         }
       }
       manyLists.add(singleList);
       return manyLists;
@@ -80,32 +76,35 @@ public class DBScan {
          unvisitedPoints.remove(randNum);
          visitedPoints.add(list);
 
-         int points = numNeighbors(list, radius);
+         ArrayList<String> neighborhood = epNeighborhood(list, radius);
 
 
       } while (unvisitedPoints.size() != 0);
       return null;
    }
 
-   public int numNeighbors(ArrayList<String> list, int radius) {
+   public ArrayList<String> epNeighborhood(ArrayList<String> list, int radius) {
       ArrayList<String> bank = new ArrayList<>();
+      ArrayList<String> neighbors = new ArrayList<>();
       int level = 1;
-      int numPoints = 0;
 
-      numPoints += list.size() - 1;
       if (radius != 1) {
-         for (int i = 1; i < list.size(); i++) {
+         for (int i = 0; i < list.size(); i++) {
             bank.add(list.get(i));
          }
       }
       level++;
 
+      int i = 1;
       while (level <= radius) {
-         String header = bank.get(0);
-         ArrayList<String> temp = getList(header);
-         bank.remove(0);
-         for (int i = 1; i < temp.size(); i++) {
-            String point = temp.get(i);
+
+
+         String id = bank.get(i);
+         i++;
+
+         ArrayList<String> temp = getList(id);
+         for (int j = 1; j < temp.size(); j++) {
+            String point = temp.get(j);
             if (!bank.contains(point)) {
                bank.add(point);
             }
@@ -114,7 +113,7 @@ public class DBScan {
       }
       //go through bank and count
 
-      return numPoints;
+      return bank;
    }
 
    public ArrayList<String> getList(String header) {
@@ -127,7 +126,18 @@ public class DBScan {
          }
       }
       //Preferably use some kind of search like binary, but I'll implement linear for now.
+      return null;
+   }
 
+   public ArrayList<String> getList(ArrayList<ArrayList<String>> dataset, String header) {
+      if (dataset != null) {
+         for (int i = 0; i < dataset.size(); i++) {
+            if (dataset.get(i).get(0).compareTo(header) == 0) {
+               return dataset.get(i);
+            }
+         }
+      }
+      //Preferably use some kind of search like binary, but I'll implement linear for now.
       return null;
    }
 }

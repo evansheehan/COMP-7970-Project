@@ -12,10 +12,10 @@ public class DBScanTest {
 
    @Test
    public void test1() throws FileNotFoundException {
-      DBScan scan = new DBScan("com-dblp.ungraph.txt");
-      ArrayList<String> list = scan.getList("386");
-      //scan.dbScan(3, 3);
+      DBScan scan = new DBScan("CA-GrQc.txt");
+      scan.dbScan(2, 3);
    }
+
    @Test
    public void test2() throws FileNotFoundException {
       DBScan scan = new DBScan("smallTest.txt");
