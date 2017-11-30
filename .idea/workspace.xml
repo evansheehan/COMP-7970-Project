@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0a5f1f1-3262-400a-80da-40e0953f460a" name="Default" comment="11/29/2017 6:49pm">
+    <list default="true" id="b0a5f1f1-3262-400a-80da-40e0953f460a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/DBScan.class" afterPath="$PROJECT_DIR$/out/production/Project/DBScan.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/DBScanTest.class" afterPath="$PROJECT_DIR$/out/production/Project/DBScanTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBScan.java" afterPath="$PROJECT_DIR$/src/DBScan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBScanTest.java" afterPath="$PROJECT_DIR$/src/DBScanTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +24,8 @@
       <file leaf-file-name="DBScan.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBScan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="50">
+              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,8 +87,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/smallTest.txt" />
-        <option value="$PROJECT_DIR$/src/DBScan.java" />
         <option value="$PROJECT_DIR$/src/DBScanTest.java" />
+        <option value="$PROJECT_DIR$/src/DBScan.java" />
       </list>
     </option>
   </component>
@@ -626,7 +627,7 @@
       <workItem from="1510713546847" duration="1047000" />
       <workItem from="1510770228294" duration="1342000" />
       <workItem from="1511722931815" duration="108000" />
-      <workItem from="1511818859117" duration="24148000" />
+      <workItem from="1511818859117" duration="27298000" />
     </task>
     <task id="LOCAL-00001" summary="11/14/2017">
       <created>1510682663496</created>
@@ -719,7 +720,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512003515196</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="11/29/2017 8:24pm">
+      <created>1512008703762</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1512008703762</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -729,11 +737,8 @@
     <history-entry file="DBScanTest_test1 - 2017.11.29 at 20h 24m 26s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test2 - 2017.11.28 at 16h 01m 47s.xml">
-      <configuration name="DBScanTest.test2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test2 - 2017.11.28 at 16h 03m 22s.xml">
-      <configuration name="DBScanTest.test2" configurationId="JUnit" />
+    <history-entry file="DBScanTest_test1 - 2017.11.29 at 20h 52m 37s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DBScanTest_test2 - 2017.11.29 at 18h 04m 23s.xml">
       <configuration name="DBScanTest.test2" configurationId="JUnit" />
@@ -753,9 +758,12 @@
     <history-entry file="DBScanTest_test2 - 2017.11.29 at 18h 47m 05s.xml">
       <configuration name="DBScanTest.test2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DBScanTest_test2 - 2017.11.29 at 20h 44m 14s.xml">
+      <configuration name="DBScanTest.test2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36925000" />
+    <option name="totallyTimeSpent" value="40075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="654" extended-state="6" />
@@ -783,7 +791,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37435898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31623933" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -813,11 +821,20 @@
     <MESSAGE value="11/14/2017" />
     <MESSAGE value="11/28/2017" />
     <MESSAGE value="11/29/2017 6:49pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="11/29/2017 6:49pm" />
+    <MESSAGE value="11/29/2017 8:24pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/29/2017 8:24pm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="46" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DBScan.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1007,8 +1024,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DBScan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="50">
+          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

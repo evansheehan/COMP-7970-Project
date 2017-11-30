@@ -27,19 +27,20 @@ public class DBScan {
          Scanner inLine = new Scanner(line);
 
          if (!line.startsWith("#")) {
-            String point = inLine.next();
+            String fromNode = inLine.next();
+            String toNode = inLine.next();
             if (singleList.size() == 0) {
-               singleList.add(point);
-               singleList.add(inLine.next());
+               singleList.add(fromNode);
+               singleList.add(toNode);
                prevNode = singleList.get(0);
-            } else if (prevNode.compareTo(point) == 0) {
-               singleList.add(inLine.next());
+            } else if (prevNode.compareTo(fromNode) == 0) {
+               singleList.add(toNode);
                prevNode = singleList.get(0);
-            } else if (prevNode.compareTo(point) != 0) {
+            } else if (prevNode.compareTo(fromNode) != 0) {
                manyLists.add(singleList);
                singleList = new ArrayList<>();
-               singleList.add(point);
-               singleList.add(inLine.next());
+               singleList.add(fromNode);
+               singleList.add(toNode);
                prevNode = singleList.get(0);
             }
          }
@@ -62,11 +63,7 @@ public class DBScan {
          unvisitedPoints.remove(randNum);
          visitedPoints.add(list);
 
-         //getNeighborhood
-
-
-
-
+         int points = numNeighbors(list, radius);
 
 
       } while (unvisitedPoints.size() != 0);
@@ -79,27 +76,31 @@ public class DBScan {
       int numPoints = 0;
 
       numPoints += list.size() - 1;
+      if (radius != 1) {
+         for (int i = 1; i < list.size(); i++) {
+            bank.add(list.get(i));
+         }
+      }
       level++;
-
 
       while (level <= radius) {
          String header = bank.get(0);
-         //use getList method
+         ArrayList<String> temp = getList(header);
          bank.remove(0);
-         for (int i = 1; i < list.size(); i++) {
-            String point = list.get(i);
+         for (int i = 1; i < temp.size(); i++) {
+            String point = temp.get(i);
             if (!bank.contains(point)) {
                bank.add(point);
             }
          }
          level++;
       }
-         //go through bank and count
+      //go through bank and count
 
-      return 0;
+      return numPoints;
    }
 
-   public ArrayList<String> getList (String header) {
+   public ArrayList<String> getList(String header) {
 
       for (int i = 0; i < dataset.size(); i++) {
          if (dataset.get(i).get(0).compareTo(header) == 0) {
