@@ -53,7 +53,6 @@ public class DBScan {
       ArrayList<ArrayList<String>> unvisitedPoints = new ArrayList(this.dataset);
       ArrayList<ArrayList<String>> clusters = new ArrayList<>();
       ArrayList<ArrayList<String>> visitedPoints = new ArrayList<>();
-      ArrayList<String> bank = new ArrayList<>();
       ArrayList<String> list;
       Random randGen = new Random();
 
@@ -62,27 +61,35 @@ public class DBScan {
          list = unvisitedPoints.get(randNum);
          unvisitedPoints.remove(randNum);
          visitedPoints.add(list);
-         int level = 1;
-         int numPoints = 0;
 
-         numPoints += list.size() - 1;
-         level++;
-         while (level <= radius) {
-            for (int i = 1; i < list.size(); i++) {
-               String point = list.get(i);
-               if (!bank.contains(point)) {
-                  bank.add(point);
-               }
-            }
-            level++;
-         }
+         //getNeighborhood
+
+
+
+
 
 
       } while (unvisitedPoints.size() != 0);
       return null;
    }
 
-   public int getNeighborhood(int radius) {
+   public int getNeighborhood(ArrayList<String> list, int radius) {
+      ArrayList<String> bank = new ArrayList<>();
+      int level = 1;
+      int numPoints = 0;
+
+      numPoints += list.size() - 1;
+      level++;
+      while (level <= radius) {
+         for (int i = 1; i < list.size(); i++) {
+            String point = list.get(i);
+            if (!bank.contains(point)) {
+               bank.add(point);
+            }
+         }
+         level++;
+      }
+         //go through bank and count
 
       return 0;
    }
