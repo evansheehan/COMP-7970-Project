@@ -1,7 +1,6 @@
 import java.io.*;
-import java.lang.reflect.Array;
-import java.nio.Buffer;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -45,22 +44,46 @@ public class DBScan {
             }
          }
       }
+      manyLists.add(singleList);
       return manyLists;
    }
 
    public ArrayList<ArrayList<String>> dbScan(int radius, int minPts) {
       ArrayList<ArrayList<String>> dataset = new ArrayList<>(this.dataset);
-      ArrayList<ArrayList<String>> unvisitedPoints = new ArrayList<>(dataset);
+      ArrayList<ArrayList<String>> unvisitedPoints = new ArrayList(this.dataset);
+      ArrayList<ArrayList<String>> clusters = new ArrayList<>();
+      ArrayList<ArrayList<String>> visitedPoints = new ArrayList<>();
+      ArrayList<String> bank = new ArrayList<>();
       ArrayList<String> list;
       Random randGen = new Random();
 
       do {
          int randNum = randGen.nextInt(dataset.size());
-         list = dataset.get(randNum);
+         list = unvisitedPoints.get(randNum);
+         unvisitedPoints.remove(randNum);
+         visitedPoints.add(list);
+         int level = 1;
+         int numPoints = 0;
 
-      }
-      while (unvisitedPoints.size() > 0);
+         numPoints += list.size() - 1;
+         level++;
+         while (level <= radius) {
+            for (int i = 1; i < list.size(); i++) {
+               String point = list.get(i);
+               if (!bank.contains(point)) {
+                  bank.add(point);
+               }
+            }
+            level++;
+         }
 
+
+      } while (unvisitedPoints.size() != 0);
       return null;
+   }
+
+   public int getNeighborhood(int radius) {
+
+      return 0;
    }
 }
