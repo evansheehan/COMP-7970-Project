@@ -29,20 +29,37 @@ public class DBScan {
          if (!line.startsWith("#")) {
             String fromNode = inLine.next();
             String toNode = inLine.next();
-            if (singleList.size() == 0) {
-               singleList.add(fromNode);
-               singleList.add(toNode);
-               prevNode = singleList.get(0);
-            } else if (prevNode.compareTo(fromNode) == 0) {
-               singleList.add(toNode);
-               prevNode = singleList.get(0);
-            } else if (prevNode.compareTo(fromNode) != 0) {
-               manyLists.add(singleList);
-               singleList = new ArrayList<>();
-               singleList.add(fromNode);
-               singleList.add(toNode);
-               prevNode = singleList.get(0);
+            if (getList(fromNode) == null) {
+               if (singleList.size() == 0) {
+                  singleList.add(fromNode);
+                  singleList.add(toNode);
+                  prevNode = singleList.get(0);
+               } else if (prevNode.compareTo(fromNode) == 0) {
+                  singleList.add(toNode);
+                  prevNode = singleList.get(0);
+               } else if (prevNode.compareTo(fromNode) != 0) {
+                  manyLists.add(singleList);
+                  singleList = new ArrayList<>();
+                  singleList.add(fromNode);
+                  singleList.add(toNode);
+                  prevNode = singleList.get(0);
+               }
             }
+            else {
+               getList(fromNode).add(toNode);
+            }
+
+
+            if (getList(toNode) == null) {
+               ArrayList<String> temp = new ArrayList<>();
+               temp.add(toNode);
+               temp.add(fromNode);
+               manyLists.add(temp);
+            } else {
+               getList(toNode).add(fromNode);
+            }
+
+
          }
       }
       manyLists.add(singleList);
@@ -102,9 +119,11 @@ public class DBScan {
 
    public ArrayList<String> getList(String header) {
 
-      for (int i = 0; i < dataset.size(); i++) {
-         if (dataset.get(i).get(0).compareTo(header) == 0) {
-            return dataset.get(i);
+      if (dataset != null) {
+         for (int i = 0; i < dataset.size(); i++) {
+            if (dataset.get(i).get(0).compareTo(header) == 0) {
+               return dataset.get(i);
+            }
          }
       }
       //Preferably use some kind of search like binary, but I'll implement linear for now.
