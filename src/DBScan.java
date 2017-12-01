@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -290,8 +291,7 @@ public class DBScan {
       Scanner in = new Scanner(new FileInputStream(new File(fileName)));
       ArrayList<ArrayList<String>> manyLists = new ArrayList<>();
       ArrayList<String> singleList = new ArrayList<>();
-      ArrayList<String> possibleList = new ArrayList<>();
-      String prevNode = "";
+      ArrayList<String> possibleList;
 
       while (in.hasNext()) {
          String line = in.nextLine();
@@ -324,6 +324,17 @@ public class DBScan {
       }
       manyLists.add(singleList);
       return manyLists;
+   }
+
+   class SortedArrayList<T> extends ArrayList<T> {
+
+      @SuppressWarnings("unchecked")
+      public void insertSorted(T value) {
+         add(value);
+         Comparable<T> cmp = (Comparable<T>) value;
+         for (int i = size()-1; i > 0 && cmp.compareTo(get(i-1)) < 0; i--)
+            Collections.swap(this, i, i-1);
+      }
    }
 }
 
