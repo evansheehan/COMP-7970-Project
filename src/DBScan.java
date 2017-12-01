@@ -1,17 +1,15 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Created by Evan on 11/6/2017.
+ * Created by Evan Sheehan & Branson Popp & Jordan Peterson on 11/6/2017.
  */
 
 public class DBScan {
 
    private ArrayList<ArrayList<String>> dataset;
-   private ArrayList<String> datasetIDs;
    private ArrayList<String> unvisitedPoints;
    private ArrayList<String> visitedPoints;
    private ArrayList<ArrayList<String>> clusters;
@@ -20,7 +18,7 @@ public class DBScan {
    public DBScan(String fileName) throws FileNotFoundException {
       unvisitedPoints = new ArrayList<>();
       visitedPoints = new ArrayList<>();
-      dataset = readInput(fileName);
+      dataset = readInputAsymmetric(fileName);
       clusters = new ArrayList<>();
       noise = new ArrayList<>();
    }
@@ -55,18 +53,8 @@ public class DBScan {
             }
          }
 
-
-            /*if (getList(manyLists, toNode) == null) {
-               ArrayList<String> temp = new ArrayList<>();
-               temp.add(toNode);
-               temp.add(fromNode);
-               manyLists.add(temp);
-            } else {
-               getList(manyLists, toNode).add(fromNode);
-            }*/
-
-
-      }manyLists.add(singleList);
+      }
+      manyLists.add(singleList);
       return manyLists;
    }
 
@@ -111,8 +99,7 @@ public class DBScan {
             }
             clusters.add(cluster);
 
-         }
-         else {
+         } else {
             noise.add(list.get(0));
          }
 
@@ -172,38 +159,6 @@ public class DBScan {
    }
 
 
-   /*public ArrayList<String> epNeighborhood(ArrayList<String> list, int radius) {
-      ArrayList<String> bank = new ArrayList<>();
-      ArrayList<String> neighbors = new ArrayList<>();
-      int level = 1;
-
-      if (radius != 1) {
-         for (int i = 1; i < list.size(); i++) {
-            bank.add(list.get(i));
-         }
-      }
-      level++;
-
-      int i = 1;
-      while (level <= radius) {
-
-         String id = bank.get(i);
-         i++;
-
-         ArrayList<String> temp = getList(id);
-         for (int j = 1; j < temp.size(); j++) {
-            String point = temp.get(j);
-            if (!bank.contains(point)) {
-               bank.add(point);
-            }
-         }
-         level++;
-      }
-      //go through bank and count
-
-      return bank;
-   }*/
-
    public ArrayList<String> getList(String header) {
 
       if (dataset != null) {
@@ -229,6 +184,46 @@ public class DBScan {
       return null;
    }
 
+   /*public ArrayList<String> getListBinary(String header) {
+      if (dataset.size() != 0) {
+         int left = 0;
+         int right = dataset.size() - 1;
+         while (right <= left) {
+            int mid = left + ((right - left) / 2);
+            if (Integer.parseInt(dataset.get(mid).get(0)) > Integer.parseInt(header)) {
+               right = mid - 1;
+            }
+            else if (Integer.parseInt(dataset.get(mid).get(0)) < Integer.parseInt(header)) {
+               left = mid + 1;
+            }
+            else {
+               return dataset.get(mid);
+            }
+         }
+      }
+      return null;
+   }*/
+
+   public ArrayList<String> getListBinary(ArrayList<ArrayList<String>> dataset, String header) {
+      if (dataset.size() != 0) {
+         int left = 0;
+         int right = dataset.size() - 1;
+         while (left <= right) {
+            int mid = left + ((right - left) / 2);
+            if (Integer.parseInt(dataset.get(mid).get(0)) > Integer.parseInt(header)) {
+               right = mid - 1;
+            }
+            else if (Integer.parseInt(dataset.get(mid).get(0)) < Integer.parseInt(header)) {
+               left = mid + 1;
+            }
+            else {
+               return dataset.get(mid);
+            }
+         }
+      }
+      return null;
+   }
+
    public boolean isInCluster(String id) {
       for (ArrayList<String> cluster : clusters) {
          for (String point : cluster) {
@@ -239,4 +234,97 @@ public class DBScan {
       }
       return false;
    }
+
+   /*public ArrayList<ArrayList<String>> readInputAsymmetric(String fileName) throws FileNotFoundException {
+      Scanner in = new Scanner(new FileInputStream(new File(fileName)));
+      ArrayList<ArrayList<String>> manyLists = new ArrayList<>();
+      ArrayList<String> singleList = new ArrayList<>();
+      ArrayList<String> possibleList = new ArrayList<>();
+      String prevNode = "";
+
+      while (in.hasNext()) {
+         String line = in.nextLine();
+         Scanner inLine = new Scanner(line);
+
+         if (!line.startsWith("#")) {
+            String point = inLine.next();
+            String secondPoint = inLine.next();
+            if (getList(point) == null) {
+               if (singleList.size() == 0) {
+                  singleList.add(point);
+                  singleList.add(secondPoint);
+                  prevNode = singleList.get(0);
+               } else if (prevNode.compareTo(point) == 0) {
+                  singleList.add(secondPoint);
+                  prevNode = singleList.get(0);
+               } else if (prevNode.compareTo(point) != 0) {
+                  manyLists.add(singleList);
+                  System.out.println(manyLists.size());
+                  singleList = new ArrayList<>();
+                  singleList.add(point);
+                  singleList.add(secondPoint);
+                  prevNode = singleList.get(0);
+               }
+            }
+            else {
+               getList(point).add(secondPoint);
+            }
+
+            if (getList(secondPoint) == null) {
+               possibleList.add(secondPoint);
+               possibleList.add(point);
+               manyLists.add(possibleList);
+               possibleList = new ArrayList<>();
+            } else {
+               getList(secondPoint).add(point);
+            }
+
+         }
+
+      }
+      manyLists.add(singleList);
+      return manyLists;
+   }*/
+
+   public ArrayList<ArrayList<String>> readInputAsymmetric(String fileName) throws FileNotFoundException {
+      Scanner in = new Scanner(new FileInputStream(new File(fileName)));
+      ArrayList<ArrayList<String>> manyLists = new ArrayList<>();
+      ArrayList<String> singleList = new ArrayList<>();
+      ArrayList<String> possibleList = new ArrayList<>();
+      String prevNode = "";
+
+      while (in.hasNext()) {
+         String line = in.nextLine();
+         Scanner inLine = new Scanner(line);
+         possibleList = new ArrayList<>();
+
+
+         if (!line.startsWith("#")) {
+            String point = inLine.next();
+            String secondPoint = inLine.next();
+            if (getListBinary(manyLists, point) == null) {
+               singleList.add(point);
+               singleList.add(secondPoint);
+               manyLists.add(singleList);
+               singleList = new ArrayList<>();
+            } else if (!getListBinary(manyLists, point).contains(secondPoint)) {
+               getListBinary(manyLists, point).add(secondPoint);
+            }
+
+            if (getListBinary(manyLists, secondPoint) == null) {
+               possibleList.add(secondPoint);
+               possibleList.add(point);
+               manyLists.add(possibleList);
+            } else {
+               getListBinary(manyLists, secondPoint).add(point);
+            }
+
+         }
+         System.out.println(manyLists.size());
+      }
+      manyLists.add(singleList);
+      return manyLists;
+   }
 }
+
+

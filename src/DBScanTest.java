@@ -13,12 +13,25 @@ public class DBScanTest {
    @Test
    public void test1() throws FileNotFoundException {
       DBScan scan = new DBScan("CA-GrQc.txt");
-      scan.dbScan(2, 10);
+      scan.dbScan(1, 30);
    }
 
    @Test
    public void test2() throws FileNotFoundException {
+      DBScan scan = new DBScan("com-dblp.ungraph.txt");
+      scan.dbScan(1, 30);
+   }
+
+   @Test
+   public void test3() throws FileNotFoundException {
       DBScan scan = new DBScan("smallTest.txt");
       scan.dbScan(2, 3);
+   }
+
+   @Test
+   public void quickTest() {
+      String num1 = "1000";
+      String num2 = "210";
+      int compare = num1.compareTo(num2);
    }
 }
