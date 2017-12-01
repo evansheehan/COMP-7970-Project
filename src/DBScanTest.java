@@ -12,12 +12,12 @@ public class DBScanTest {
    public void evaluationTestForSymmetric() throws FileNotFoundException {
       double startTime = System.nanoTime();
       DBScan scan = new DBScan("CA-GrQc.txt", "symmetric");
-      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 20);
+      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 5);
       int averageClusterSize = scan.avgClusterSize(clusters);
       ArrayList<String> largestCluster = scan.largestCluster(clusters);
       double endTime = System.nanoTime();
       double elapsedTime = endTime - startTime;
-      System.out.println("Largest Cluster Was: " + largestCluster.get(0) + ". Its Size Was: " + largestCluster.size());
+      System.out.println("Largest Cluster Was: \"" + largestCluster.get(0) + "\". Its Size Was: " + largestCluster.size());
       System.out.println("Average Cluster Size Was: " + averageClusterSize);
       System.out.println("Total Runtime Was: " + (elapsedTime*(100000000)) + " Seconds");
    }
@@ -31,7 +31,7 @@ public class DBScanTest {
       ArrayList<String> largestCluster = scan.largestCluster(clusters);
       double endTime = System.nanoTime();
       double elapsedTime = endTime - startTime;
-      System.out.println("Largest Cluster Was: " + largestCluster.get(0) + ". Its Size Was: " + largestCluster.size());
+      System.out.println("Largest Cluster Was: \"" + largestCluster.get(0) + "\". Its Size Was: " + largestCluster.size());
       System.out.println("Average Cluster Size Was: " + averageClusterSize);
       System.out.println("Total Runtime Was: " + (elapsedTime*(100000000)) + " Seconds");
    }
@@ -40,12 +40,12 @@ public class DBScanTest {
    public void evaluationTestForAsymmetricSmaller() throws FileNotFoundException {
       double startTime = System.nanoTime();
       DBScan scan = new DBScan("smallTest.txt", "asymmetric");
-      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 15);
+      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 5);
       int averageClusterSize = scan.avgClusterSize(clusters);
       ArrayList<String> largestCluster = scan.largestCluster(clusters);
       double endTime = System.nanoTime();
       double elapsedTime = endTime - startTime;
-      System.out.println("Largest Cluster Was: " + largestCluster.get(0) + ". Its Size Was: " + largestCluster.size());
+      System.out.println("Largest Cluster Was: \"" + largestCluster.get(0) + "\". Its Size Was: " + largestCluster.size());
       System.out.println("Average Cluster Size Was: " + averageClusterSize);
       System.out.println("Total Runtime Was: " + (elapsedTime*(100000000)) + " Seconds");
    }

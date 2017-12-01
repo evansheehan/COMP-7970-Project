@@ -155,6 +155,7 @@ public class DBScan {
 
       } while (unvisitedPoints.size() != 0);
       System.out.println("Number of Clusters Produced: " + clusters.size());
+      System.out.println("Amount of Noise Generated: " + noise.size());
       return clusters;
    }
 
