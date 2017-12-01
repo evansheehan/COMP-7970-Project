@@ -12,10 +12,11 @@ public class DBScanTest {
    public void evaluationTestForSymmetric() throws FileNotFoundException {
       double startTime = System.nanoTime();
       DBScan scan = new DBScan("CA-GrQc.txt", "symmetric");
-      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 5);
-      System.out.println(scan.avgClusterSize(clusters));
+      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 20);
+      int averageClusterSize = scan.avgClusterSize(clusters);
       double endTime = System.nanoTime();
       double elapsedTime = endTime - startTime;
+      System.out.println("Average Cluster Size Was: " + averageClusterSize);
       System.out.println("Total Runtime Was: " + (elapsedTime*(100000000)) + " Seconds");
    }
 
@@ -23,9 +24,11 @@ public class DBScanTest {
    public void evaluationTestForAsymmetric() throws FileNotFoundException {
       double startTime = System.nanoTime();
       DBScan scan = new DBScan("com-dblp.ungraph.txt", "asymmetric");
-      scan.dbScan(1, 5);
+      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 5);
+      int averageClusterSize = scan.avgClusterSize(clusters);
       double endTime = System.nanoTime();
       double elapsedTime = endTime - startTime;
+      System.out.println("Average Cluster Size Was: " + averageClusterSize);
       System.out.println("Total Runtime Was: " + (elapsedTime*(100000000)) + " Seconds");
    }
 
@@ -33,9 +36,11 @@ public class DBScanTest {
    public void evaluationTestForAsymmetricSmaller() throws FileNotFoundException {
       double startTime = System.nanoTime();
       DBScan scan = new DBScan("smallTest.txt", "asymmetric");
-      scan.dbScan(1, 20);
+      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 2);
+      int averageClusterSize = scan.avgClusterSize(clusters);
       double endTime = System.nanoTime();
       double elapsedTime = endTime - startTime;
+      System.out.println("Average Cluster Size Was: " + averageClusterSize);
       System.out.println("Total Runtime Was: " + (elapsedTime*(100000000)) + " Seconds");
    }
 
