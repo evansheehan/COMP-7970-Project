@@ -14,11 +14,15 @@ public class DBScan {
    private ArrayList<String> datasetIDs;
    private ArrayList<String> unvisitedPoints;
    private ArrayList<String> visitedPoints;
+   private ArrayList<ArrayList<String>> clusters;
+   private ArrayList<String> noise;
 
    public DBScan(String fileName) throws FileNotFoundException {
       unvisitedPoints = new ArrayList<>();
       visitedPoints = new ArrayList<>();
       dataset = readInput(fileName);
+      clusters = new ArrayList<>();
+      noise = new ArrayList<>();
    }
 
    public ArrayList<ArrayList<String>> readInput(String fileName) throws FileNotFoundException {
@@ -69,7 +73,6 @@ public class DBScan {
 
    public ArrayList<ArrayList<String>> dbScan(int radius, int minPts) {
       ArrayList<ArrayList<String>> dataset = new ArrayList<>(this.dataset);
-      ArrayList<ArrayList<String>> clusters = new ArrayList<>();
       ArrayList<String> list;
       Random randGen = new Random();
 
@@ -95,12 +98,19 @@ public class DBScan {
                      }
                   }
                }
+               if (!isInCluster(point)) {
+                  cluster.add(point);
+               }
             }
+            clusters.add(cluster);
+         }
+         else {
+            noise.add(list.get(0));
          }
 
 
       } while (unvisitedPoints.size() != 0);
-      return null;
+      return clusters;
    }
 
 
@@ -118,8 +128,7 @@ public class DBScan {
             levelSize = bank.size();
          }
          level++;
-      }
-      else {
+      } else {
          for (int i = 1; i < list.size(); i++) {
             neighbors.add(list.get(i));
          }
@@ -210,5 +219,16 @@ public class DBScan {
       }
       //Preferably use some kind of search like binary, but I'll implement linear for now.
       return null;
+   }
+
+   public boolean isInCluster(String id) {
+      for (ArrayList<String> cluster : clusters) {
+         for (String point : cluster) {
+            if (id.compareTo(point) == 0) {
+               return true;
+            }
+         }
+      }
+      return false;
    }
 }
