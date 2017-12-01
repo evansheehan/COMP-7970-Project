@@ -13,7 +13,7 @@ public class DBScanTest {
    @Test
    public void test1() throws FileNotFoundException {
       DBScan scan = new DBScan("CA-GrQc.txt");
-      scan.dbScan(2, 3);
+      scan.dbScan(1, 3);
    }
 
    @Test

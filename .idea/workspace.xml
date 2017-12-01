@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0a5f1f1-3262-400a-80da-40e0953f460a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/DBScanTest.class" afterPath="$PROJECT_DIR$/out/production/Project/DBScanTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBScan.java" afterPath="$PROJECT_DIR$/src/DBScan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBScanTest.java" afterPath="$PROJECT_DIR$/src/DBScanTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,10 +23,11 @@
       <file leaf-file-name="DBScan.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBScan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="112" column="7" lean-forward="true" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
+            <state relative-caret-position="-574">
+              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3688#3696#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,8 +36,8 @@
       <file leaf-file-name="DBScanTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DBScanTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="20">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +87,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/smallTest.txt" />
-        <option value="$PROJECT_DIR$/src/DBScanTest.java" />
         <option value="$PROJECT_DIR$/src/DBScan.java" />
+        <option value="$PROJECT_DIR$/src/DBScanTest.java" />
       </list>
     </option>
   </component>
@@ -625,7 +627,7 @@
       <workItem from="1510713546847" duration="1047000" />
       <workItem from="1510770228294" duration="1342000" />
       <workItem from="1511722931815" duration="108000" />
-      <workItem from="1511818859117" duration="41131000" />
+      <workItem from="1511818859117" duration="45418000" />
     </task>
     <task id="LOCAL-00001" summary="11/14/2017">
       <created>1510682663496</created>
@@ -746,31 +748,17 @@
       <option name="project" value="LOCAL" />
       <updated>1512083069560</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="11/30/2017 5:05pm">
+      <created>1512083116584</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1512083116584</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 13h 19m 44s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 14h 07m 01s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 14h 22m 32s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 14h 26m 18s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 14h 29m 53s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 15h 54m 00s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 15h 54m 18s.xml">
-      <configuration name="DBScanTest.test1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DBScanTest_test1 - 2017.11.30 at 15h 56m 04s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
@@ -780,9 +768,30 @@
     <history-entry file="DBScanTest_test1 - 2017.11.30 at 16h 03m 07s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 18h 07m 32s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 18h 10m 32s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 18h 12m 28s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 18h 13m 19s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 18h 17m 18s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 18h 20m 41s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 18h 21m 26s.xml">
+      <configuration name="DBScanTest.test1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53908000" />
+    <option name="totallyTimeSpent" value="58195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="654" extended-state="6" />
@@ -810,7 +819,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2888889" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44957265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -843,37 +852,44 @@
     <MESSAGE value="11/29/2017 8:24pm" />
     <MESSAGE value="11/29/2017 9:19pm" />
     <MESSAGE value="11/29/2017 10:16pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="11/29/2017 10:16pm" />
+    <MESSAGE value="11/30/2017 5:05pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/30/2017 5:05pm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/DBScan.java</url>
-          <line>60</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/DBScan.java</url>
-          <line>61</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/DBScan.java</url>
-          <line>115</line>
+          <line>182</line>
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/DBScan.java</url>
-          <line>98</line>
+          <line>166</line>
           <properties />
           <option name="timeStamp" value="69" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DBScan.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="71" />
+      <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -888,6 +904,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3688#3696#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -916,6 +933,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3688#3696#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -944,6 +962,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3688#3696#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -972,6 +991,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3688#3696#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,6 +1020,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3688#3696#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1051,16 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBScanTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -1069,12 +1080,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBScan.java">
+    <entry file="file://$PROJECT_DIR$/src/DBScanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="112" column="7" lean-forward="true" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
+        <state relative-caret-position="20">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-574">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3688#3696#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -12,8 +12,12 @@ public class DBScan {
 
    private ArrayList<ArrayList<String>> dataset;
    private ArrayList<String> datasetIDs;
+   private ArrayList<String> unvisitedPoints;
+   private ArrayList<String> visitedPoints;
 
    public DBScan(String fileName) throws FileNotFoundException {
+      unvisitedPoints = new ArrayList<>();
+      visitedPoints = new ArrayList<>();
       dataset = readInput(fileName);
    }
 
@@ -39,6 +43,7 @@ public class DBScan {
                prevNode = singleList.get(0);
             } else if (prevNode.compareTo(fromNode) != 0) {
                manyLists.add(singleList);
+               unvisitedPoints.add(singleList.get(0));
                singleList = new ArrayList<>();
                singleList.add(fromNode);
                singleList.add(toNode);
@@ -64,32 +69,95 @@ public class DBScan {
 
    public ArrayList<ArrayList<String>> dbScan(int radius, int minPts) {
       ArrayList<ArrayList<String>> dataset = new ArrayList<>(this.dataset);
-      ArrayList<ArrayList<String>> unvisitedPoints = new ArrayList(this.dataset);
       ArrayList<ArrayList<String>> clusters = new ArrayList<>();
-      ArrayList<ArrayList<String>> visitedPoints = new ArrayList<>();
       ArrayList<String> list;
       Random randGen = new Random();
 
       do {
          int randNum = randGen.nextInt(dataset.size());
-         list = unvisitedPoints.get(randNum);
+         list = getList(unvisitedPoints.get(randNum));
          unvisitedPoints.remove(randNum);
-         visitedPoints.add(list);
+         visitedPoints.add(list.get(0));
 
-         ArrayList<String> neighborhood = epNeighborhood(list, radius);
+         ArrayList<String> neighborhood = getNeighborhood(list, radius);
+         if (neighborhood.size() >= minPts) {
+            ArrayList<String> cluster = new ArrayList<>();
+            cluster.add(list.get(0));
+
+            for (String point : neighborhood) {
+               if (unvisitedPoints.contains(point)) {
+                  unvisitedPoints.remove(point);
+                  visitedPoints.add(point);
+                  ArrayList<String> n = getNeighborhood(neighborhood, radius);
+                  if (n.size() >= minPts) {
+                     for (String p : n) {
+                        neighborhood.add(p);
+                     }
+                  }
+               }
+            }
+         }
 
 
       } while (unvisitedPoints.size() != 0);
       return null;
    }
 
-   public ArrayList<String> epNeighborhood(ArrayList<String> list, int radius) {
+
+   public ArrayList<String> getNeighborhood(ArrayList<String> list, int radius) {
+      ArrayList<String> bank = new ArrayList<>();
+      ArrayList<String> temp = new ArrayList<>();
+      ArrayList<String> neighbors = new ArrayList<String>();
+      int levelSize = 0;
+      int level = 1;
+
+      if (radius != 1) {
+         for (int i = 1; i < list.size(); i++) {
+            bank.add(list.get(i));
+            neighbors.add(list.get(i));
+            levelSize = bank.size();
+         }
+      }
+
+      level++;
+
+      while (level <= radius) {
+
+         while (levelSize != 0) {    // bull
+            String header = bank.get(0);
+            temp = getList(header);
+            bank.remove(0);
+            levelSize--;
+
+            for (int i = 1; i < temp.size(); i++) {
+               String point = temp.get(i);
+               if (!bank.contains(point)) {
+                  bank.add(point);
+                  if (!neighbors.contains(point)) {
+                     neighbors.add(point);
+                  }
+               }
+            }
+         }
+         levelSize = bank.size();
+         level++;
+      }
+      //go through bank and count
+      if (neighbors != null) {
+         return neighbors;
+      }
+
+      return null;
+   }
+
+
+   /*public ArrayList<String> epNeighborhood(ArrayList<String> list, int radius) {
       ArrayList<String> bank = new ArrayList<>();
       ArrayList<String> neighbors = new ArrayList<>();
       int level = 1;
 
       if (radius != 1) {
-         for (int i = 0; i < list.size(); i++) {
+         for (int i = 1; i < list.size(); i++) {
             bank.add(list.get(i));
          }
       }
@@ -97,7 +165,6 @@ public class DBScan {
 
       int i = 1;
       while (level <= radius) {
-
 
          String id = bank.get(i);
          i++;
@@ -114,7 +181,7 @@ public class DBScan {
       //go through bank and count
 
       return bank;
-   }
+   }*/
 
    public ArrayList<String> getList(String header) {
 
