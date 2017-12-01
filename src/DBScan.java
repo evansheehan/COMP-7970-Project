@@ -65,6 +65,47 @@ public class DBScan {
       return manyLists;
    }
 
+   public ArrayList<ArrayList<String>> readInputAsymmetric(String fileName) throws FileNotFoundException {
+      Scanner in = new Scanner(new FileInputStream(new File(fileName)));
+      ArrayList<ArrayList<String>> manyLists = new ArrayList<>();
+      ArrayList<String> singleList = new ArrayList<>();
+      ArrayList<String> possibleList;
+
+      while (in.hasNext()) {
+         String line = in.nextLine();
+         Scanner inLine = new Scanner(line);
+         possibleList = new ArrayList<>();
+
+
+         if (!line.startsWith("#")) {
+            String point = inLine.next();
+            String secondPoint = inLine.next();
+            if (getList(manyLists, point) == null) {
+               singleList.add(point);
+               singleList.add(secondPoint);
+               manyLists.add(singleList);
+               unvisitedPoints.add(point);
+               singleList = new ArrayList<>();
+            } else if (!getList(manyLists, point).contains(secondPoint)) {
+               getList(manyLists, point).add(secondPoint);
+            }
+
+            if (getList(manyLists, secondPoint) == null) {
+               possibleList.add(secondPoint);
+               possibleList.add(point);
+               manyLists.add(possibleList);
+               unvisitedPoints.add(secondPoint);
+            } else {
+               getList(manyLists, secondPoint).add(point);
+            }
+
+         }
+         System.out.println(manyLists.size());
+      }
+      manyLists.add(singleList);
+      return manyLists;
+   }
+
    public ArrayList<ArrayList<String>> dbScan(int radius, int minPts) {
       ArrayList<String> list;
       Random randGen = new Random();
@@ -218,48 +259,6 @@ public class DBScan {
       }
       return false;
    }
-
-   public ArrayList<ArrayList<String>> readInputAsymmetric(String fileName) throws FileNotFoundException {
-      Scanner in = new Scanner(new FileInputStream(new File(fileName)));
-      ArrayList<ArrayList<String>> manyLists = new ArrayList<>();
-      ArrayList<String> singleList = new ArrayList<>();
-      ArrayList<String> possibleList;
-
-      while (in.hasNext()) {
-         String line = in.nextLine();
-         Scanner inLine = new Scanner(line);
-         possibleList = new ArrayList<>();
-
-
-         if (!line.startsWith("#")) {
-            String point = inLine.next();
-            String secondPoint = inLine.next();
-            if (getList(manyLists, point) == null) {
-               singleList.add(point);
-               singleList.add(secondPoint);
-               manyLists.add(singleList);
-               unvisitedPoints.add(point);
-               singleList = new ArrayList<>();
-            } else if (!getList(manyLists, point).contains(secondPoint)) {
-               getList(manyLists, point).add(secondPoint);
-            }
-
-            if (getList(manyLists, secondPoint) == null) {
-               possibleList.add(secondPoint);
-               possibleList.add(point);
-               manyLists.add(possibleList);
-               unvisitedPoints.add(secondPoint);
-            } else {
-               getList(manyLists, secondPoint).add(point);
-            }
-
-         }
-         System.out.println(manyLists.size());
-      }
-      manyLists.add(singleList);
-      return manyLists;
-   }
-
 }
 
 
