@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 /**
  * Created by awubis on 11/14/17.
@@ -11,7 +12,8 @@ public class DBScanTest {
    public void evaluationTestForSymmetric() throws FileNotFoundException {
       double startTime = System.nanoTime();
       DBScan scan = new DBScan("CA-GrQc.txt", "symmetric");
-      scan.dbScan(1, 5);
+      ArrayList<ArrayList<String>> clusters = scan.dbScan(1, 5);
+      System.out.println(scan.avgClusterSize(clusters));
       double endTime = System.nanoTime();
       double elapsedTime = endTime - startTime;
       System.out.println("Total Runtime Was: " + (elapsedTime*(100000000)) + " Seconds");
