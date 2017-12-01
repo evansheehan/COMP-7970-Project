@@ -1,6 +1,7 @@
 import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -269,6 +270,15 @@ public class DBScan {
       }
       avgCluster = avgCluster/clusters.size();
       return avgCluster;
+   }
+   public ArrayList<String> largestCluster(ArrayList<ArrayList<String>> clusters) {
+      ArrayList<String> largestCluster = clusters.get(0);
+      for (ArrayList<String> cluster : clusters) {
+         if (cluster.size() > largestCluster.size()) {
+            largestCluster = cluster;
+         }
+      }
+      return largestCluster;
    }
 }
 
