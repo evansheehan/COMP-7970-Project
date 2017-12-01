@@ -87,10 +87,12 @@ public class DBScan {
             ArrayList<String> cluster = new ArrayList<>();
             cluster.add(list.get(0));
 
-            for (String point : neighborhood) {
+            for (int i = 0; i < neighborhood.size(); i++) {
+               String point = neighborhood.get(i);
                if (unvisitedPoints.contains(point)) {
                   unvisitedPoints.remove(point);
                   visitedPoints.add(point);
+                  System.out.println(point);
                   ArrayList<String> n = getNeighborhood(neighborhood, radius);
                   if (n.size() >= minPts) {
                      for (String p : n) {
