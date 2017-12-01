@@ -117,9 +117,13 @@ public class DBScan {
             neighbors.add(list.get(i));
             levelSize = bank.size();
          }
+         level++;
       }
-
-      level++;
+      else {
+         for (int i = 1; i < list.size(); i++) {
+            neighbors.add(list.get(i));
+         }
+      }
 
       while (level <= radius) {
 
