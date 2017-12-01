@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0a5f1f1-3262-400a-80da-40e0953f460a" name="Default" comment="">
+    <list default="true" id="b0a5f1f1-3262-400a-80da-40e0953f460a" name="Default" comment="11/30/2017 7:47pm">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/DBScanTest.class" afterPath="$PROJECT_DIR$/out/production/Project/DBScanTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBScan.java" afterPath="$PROJECT_DIR$/src/DBScan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBScanTest.java" afterPath="$PROJECT_DIR$/src/DBScanTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +24,11 @@
       <file leaf-file-name="DBScan.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DBScan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="-1008">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4085#4093#0" expanded="true" />
+                <element signature="e#4437#4445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,8 +37,8 @@
       <file leaf-file-name="DBScanTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DBScanTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="94">
+              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,6 +121,7 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,7 +136,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -626,7 +628,8 @@
       <workItem from="1510713546847" duration="1047000" />
       <workItem from="1510770228294" duration="1342000" />
       <workItem from="1511722931815" duration="108000" />
-      <workItem from="1511818859117" duration="50233000" />
+      <workItem from="1511818859117" duration="50538000" />
+      <workItem from="1512093521846" duration="2112000" />
     </task>
     <task id="LOCAL-00001" summary="11/14/2017">
       <created>1510682663496</created>
@@ -775,46 +778,53 @@
       <option name="project" value="LOCAL" />
       <updated>1512091393352</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="11/30/2017 7:47pm">
+      <created>1512092843206</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1512092843206</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 25m 44s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 25m 01s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 28m 25s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 26m 04s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 33m 35s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 26m 27s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 33m 59s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 27m 13s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 35m 51s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 27m 50s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 40m 03s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 28m 41s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 44m 30s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 30m 38s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 44m 52s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 31m 35s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 45m 32s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 33m 09s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DBScanTest_test1 - 2017.11.30 at 19h 45m 59s.xml">
+    <history-entry file="DBScanTest_test1 - 2017.11.30 at 20h 35m 32s.xml">
       <configuration name="DBScanTest.test1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63010000" />
+    <option name="totallyTimeSpent" value="65427000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1366" height="654" extended-state="6" />
+    <frame x="0" y="23" width="1366" height="654" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -826,7 +836,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32649574" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649574" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -875,7 +885,8 @@
     <MESSAGE value="11/30/2017 5:05pm" />
     <MESSAGE value="11/30/2017 6:21pm" />
     <MESSAGE value="11/30/2017 7:23pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="11/30/2017 7:23pm" />
+    <MESSAGE value="11/30/2017 7:47pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/30/2017 7:47pm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -884,28 +895,16 @@
           <url>file://$PROJECT_DIR$/src/DBScan.java</url>
           <line>69</line>
           <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DBScan.java</url>
-          <line>70</line>
-          <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/DBScan.java</url>
-          <line>89</line>
+          <line>120</line>
           <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DBScan.java</url>
-          <line>106</line>
-          <properties />
-          <option name="timeStamp" value="79" />
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="80" />
+      <option name="time" value="82" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -920,7 +919,44 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4085#4093#0" expanded="true" />
+            <element signature="e#4437#4445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBScanTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smallTest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-dblp.ungraph.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4437#4445#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -949,7 +985,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4085#4093#0" expanded="true" />
+            <element signature="e#4437#4445#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -978,7 +1014,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4085#4093#0" expanded="true" />
+            <element signature="e#4437#4445#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1007,7 +1043,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4085#4093#0" expanded="true" />
+            <element signature="e#4437#4445#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1036,7 +1072,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4085#4093#0" expanded="true" />
+            <element signature="e#4437#4445#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1052,7 +1088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
           <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,14 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -1088,31 +1115,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DBScanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="94">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DBScan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="-1008">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4085#4093#0" expanded="true" />
+            <element signature="e#4437#4445#0" expanded="true" />
           </folding>
         </state>
       </provider>

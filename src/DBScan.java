@@ -66,8 +66,7 @@ public class DBScan {
             }*/
 
 
-      }
-      manyLists.add(singleList);
+      }manyLists.add(singleList);
       return manyLists;
    }
 
@@ -77,7 +76,7 @@ public class DBScan {
       Random randGen = new Random();
 
       do {
-         int randNum = randGen.nextInt(dataset.size());
+         int randNum = randGen.nextInt(unvisitedPoints.size());
          list = getList(unvisitedPoints.get(randNum));
          unvisitedPoints.remove(randNum);
          visitedPoints.add(list.get(0));
@@ -86,17 +85,23 @@ public class DBScan {
          if (neighborhood.size() >= minPts) {
             ArrayList<String> cluster = new ArrayList<>();
             cluster.add(list.get(0));
+            ArrayList<String> tempNeighborhood = new ArrayList<>(neighborhood);
 
-            for (int i = 0; i < neighborhood.size(); i++) {
+            for (int i = 0; i < tempNeighborhood.size(); i++) {
                String point = neighborhood.get(i);
                if (unvisitedPoints.contains(point)) {
                   unvisitedPoints.remove(point);
+                  System.out.println(unvisitedPoints.size());
                   visitedPoints.add(point);
-                  System.out.println(point);
+                  //System.out.println(point);
                   ArrayList<String> n = getNeighborhood(neighborhood, radius);
                   if (n.size() >= minPts) {
                      for (String p : n) {
-                        neighborhood.add(p);
+                        //System.out.println(p);
+                        if (!neighborhood.contains(p)) {
+                           neighborhood.add(p);
+                        }
+                        //System.out.println(neighborhood.size());
                      }
                   }
                }
@@ -105,6 +110,7 @@ public class DBScan {
                }
             }
             clusters.add(cluster);
+
          }
          else {
             noise.add(list.get(0));
